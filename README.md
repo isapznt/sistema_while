@@ -14,11 +14,17 @@ Bloqueie o acesso após erros consecutivos
 Utilize o laço do...while para controle do fluxo
 ⚙️ Funcionalidades
 ✅ Cadastro de usuários em um array de objetos
+
 🔁 Sistema de tentativas limitadas
+
 🔐 Validação de login e senha
+
 ❌ Mensagem de erro com tentativas restantes
+
 🚫 Bloqueio do sistema após 3 falhas
+
 🛑 Cancelamento da operação pelo usuário
+
 🧠 Lógica Utilizada
 
 O sistema utiliza um laço do...while, que garante que o usuário tente fazer login pelo menos uma vez.
