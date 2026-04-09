@@ -39,15 +39,18 @@ usuarios: array com logins e senhas
 tentativas: contador iniciado em 3
 autenticado: controla sucesso do login
 cancelado: verifica se o usuário desistiu
+
 💻 Tecnologias Utilizadas
 JavaScript
 Funções nativas (prompt, alert)
 Estruturas de repetição (do...while)
 Métodos de array (find)
+
 ▶️ Como Executar
 Copie o código para um arquivo .js
 Execute no navegador (console) ou em ambiente compatível
 Insira login e senha quando solicitado
+
 📢 Mensagens do Sistema
 ✔️ Acesso Liberado → login correto
 ⚠️ Tentativas restantes → erro de login
