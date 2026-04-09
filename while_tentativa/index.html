@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema de Segurança</title>
+</head>
+<body>
+
+    <h2>Login - Cyber SENAI</h2>
+
+    <input type="text" id="login" placeholder="Login"><br><br>
+    <input type="password" id="senha" placeholder="Senha"><br><br>
+
+    <button onclick="autenticar()">Entrar</button>
+
+    <p id="mensagem"></p>
+
+    <script>
+        const usuarios = [
+            { login: "user1", senha: "123" },
+            { login: "user2", senha: "abc" },
+            { login: "user3", senha: "senha3" },
+            { login: "user4", senha: "senha4" },
+            { login: "user5", senha: "senha5" },
+            { login: "user6", senha: "senha6" },
+            { login: "user7", senha: "senha7" },
+            { login: "user8", senha: "senha8" },
+            { login: "user9", senha: "senha9" },
+            { login: "admin", senha: "admin123" }
+        ];
+
+        let tentativas = 3;
+
+        function autenticar() {
+            let acessoLiberado = false;
+
+            do {
+                let login = document.getElementById("login").value;
+                let senha = document.getElementById("senha").value;
+
+                let usuarioValido = usuarios.find(user =>
+                    user.login === login && user.senha === senha
+                );
+
+                if (usuarioValido) {
+                    document.getElementById("mensagem").innerText = "Acesso Liberado";
+                    acessoLiberado = true;
+                } else {
+                    tentativas--;
+
+                    if (tentativas > 0) {
+                        document.getElementById("mensagem").innerText =
+                            "Login inválido. Tentativas restantes: " + tentativas;
+                    }
+                }
+
+            } while (!acessoLiberado && tentativas > 0);
+
+            if (!acessoLiberado && tentativas === 0) {
+                document.getElementById("mensagem").innerText =
+                    "SISTEMA BLOQUEADO - Procure o Suporte";
+            }
+        }
+    </script>
+
+</body>
+</html>
